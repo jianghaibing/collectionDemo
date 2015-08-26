@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OFl-ca-rZ1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--Table Collection View Controller-->
+        <scene sceneID="QOa-am-rG6">
+            <objects>
+                <collectionViewController id="OFl-ca-rZ1" customClass="TableCollectionViewController" customModule="collectionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="3qE-WF-Myn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="USD-mS-d4k">
+                            <size key="itemSize" width="564" height="602"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="MB3-2s-3cj">
+                                <rect key="frame" x="0.0" y="-1" width="564" height="602"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="564" height="602"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" tag="100" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-UR-AhU">
+                                            <rect key="frame" x="0.0" y="0.0" width="564" height="602"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="OFl-ca-rZ1" id="MP8-xH-HMH"/>
+                                                <outlet property="delegate" destination="OFl-ca-rZ1" id="Uh7-b8-Y1r"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="JhQ-UR-AhU" firstAttribute="top" secondItem="MB3-2s-3cj" secondAttribute="top" id="Nya-kR-Z3F"/>
+                                    <constraint firstAttribute="trailing" secondItem="JhQ-UR-AhU" secondAttribute="trailing" id="aMg-Wa-j2V"/>
+                                    <constraint firstItem="JhQ-UR-AhU" firstAttribute="leading" secondItem="MB3-2s-3cj" secondAttribute="leading" id="aTg-yJ-jdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="JhQ-UR-AhU" secondAttribute="bottom" id="r4F-Fh-DyM"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="OFl-ca-rZ1" id="R64-hU-GHg"/>
+                            <outlet property="delegate" destination="OFl-ca-rZ1" id="f8x-gb-aQQ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIL-lm-kyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="318"/>
+        </scene>
+    </scenes>
+</document>
